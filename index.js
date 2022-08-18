@@ -248,7 +248,7 @@ Use copy to do the following:
 */
 
 function listOfNames(array) {
-  let arrayCopy = array
+  let arrayCopy = [...array];
   for(let i = 0; i < array.length; i++){
     arrayCopy[i] = array[i].name;
   }
@@ -332,13 +332,13 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(array11, name11){
-  for(let i = 0; i < 21; i++){
-    if(array11[i].name == name11){
+  for(let i = 0; i < array11.length; i++){
+    if(array11[i].name === name11){
       return array11[i].bio
     }
   }
 }
-console.log(artistInfo(artists, 'Frida Kahlo'));
+console.log(artistInfo(artists, "Vasiliy Kandinskiy"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
